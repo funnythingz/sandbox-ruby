@@ -2,8 +2,13 @@ require "./clazzList"
 
 class App
     def initialize
-        clazz = ClazzList::Clazz.new
-        puts(clazz.func1)
+
+        superClazz = ClazzList::SuperClazz.new("hoge")
+        puts(superClazz.say)
+
+        subClazz = ClazzList::SubClazz.new
+        puts(subClazz.func)
+
     end
 end
 

@@ -1,11 +1,22 @@
 module ClazzList
 
-    class Clazz
-        def initialize
-            @param1 = "Hello"
+    class SuperClazz
+        def initialize(arg)
+            @superStr = arg
         end
 
-        def func1
+        def say
+            return @superStr
+        end
+    end
+
+    class SubClazz < SuperClazz
+        def initialize
+            super("super")
+            @param1 = "#{@superStr} Hello"
+        end
+
+        def func
             return "#{@param1} world"
         end
     end
