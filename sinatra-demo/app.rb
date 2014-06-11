@@ -5,14 +5,14 @@ require 'sinatra/base'
 class App < Sinatra::Base
 
     get '/' do
-        @name = "sinatra"
-        @title = "sinatra sample"
+        @title = "sinatra"
+        @name = "index"
         erb :index
     end
 
     get '/:name' do
-        @name = "#{params[:name]}"
-        @title = "#{params[:name]} sample"
+        @title = "#{params[:name]} - sinatra"
+        @name = "#{params[:name]} page"
         erb :index
     end
 
