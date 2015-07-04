@@ -1,11 +1,8 @@
-require 'pp'
-
 def main
-  p 'ready?'
-  input_a = gets.to_i
-  input_bc = gets.split(/\s+/).map(&:to_i).inject(0) { |sum, i| sum + i }
-  input_s = gets.to_s
-  p "#{input_a + input_bc} #{input_s}"
+  a = gets.to_i
+  bc = gets.chomp.split(/\s+/).map(&:to_i).inject(0) { |sum, i| sum + i }
+  s = gets.chomp.to_s
+  print "#{a + bc} #{s}\n"
 end
 
 main
